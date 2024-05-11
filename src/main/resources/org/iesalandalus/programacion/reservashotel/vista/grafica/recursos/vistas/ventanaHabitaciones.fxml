@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<Pane prefHeight="700" prefWidth="800" style="-fx-background-color: #92D4F7;" styleClass="raiz" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservashotel.vista.grafica.controladores.CVentanaHabitaciones">
+    <children>
+     <!-- Imagen habitación -->
+     <ImageView fitHeight="30" fitWidth="30" layoutX="50" layoutY="50">
+         <image>
+            <Image url="@../imagenes/Habitacion.png" />
+         </image>
+     </ImageView>
+     
+     <!-- TEXTO -->
+     <Text fill="#000000" layoutX="180" layoutY="50" text="GESTIÓN HABITACIONES">
+          <font><Font name="Arial" size="30" /></font>
+     </Text>
+    
+   	
+   	 <!-- Tabla listado habitaciones -->
+	 <TableView fx:id="TablaListadoHabitaciones" layoutX="50" layoutY="100" prefHeight="300" prefWidth="600">            
+	 
+	 	<columns>
+          <TableColumn fx:id="Identificador" prefWidth="100" text="Identificador" />
+          <TableColumn fx:id="Planta" minWidth="20" text="Planta" />
+          <TableColumn fx:id="Puerta" prefWidth="70" text="Puerta" />
+          <TableColumn fx:id="Precio" prefWidth="70" text="Precio" />
+          <TableColumn fx:id="TipoHabitacion" prefWidth="100" text="Tipo Habitacion" />
+          <TableColumn fx:id="Camas" prefWidth="70" text="Camas" />
+          <TableColumn fx:id="Bano" prefWidth="65" text="Baño" />
+          <TableColumn fx:id="Jacuzzi" prefWidth="68" text="Jacuzzi" />
+         </columns>
+            
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="MenuInsertarHabitacion" onAction="#InsertarHabitacion" text="Insertar Habitación" />
+                <MenuItem fx:id="MenuEliminarHabitacion" onAction="#EliminarHabitacion" text="Eliminar Habitación" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         
+       </TableView>
+      
+      
+     <!-- Botones para insertar o borrar habitación -->   
+     <Button fx:id="botonInsertarHabitacion" layoutX="100" layoutY="450" onAction="#InsertarHabitaciones" style="-fx-background-color: #4CAF50; -fx-border-color: #388E3C; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Insertar Habitación"/>
+
+	 <Button fx:id="botonBorrarHabitacion" layoutX="350" layoutY="450" onAction="#BorrarHabitaciones" style="-fx-background-color: #FF0000; -fx-border-color: #840000; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Eliminar Habitación"/>
+    
+     <!-- Logo -->
+     <ImageView fitHeight="30" fitWidth="30" layoutX="650" layoutY="450">
+          <image>
+             <Image url="@../imagenes/logo.png" />
+          </image>
+     </ImageView>
+
+        
+        
+    </children>
+</Pane>

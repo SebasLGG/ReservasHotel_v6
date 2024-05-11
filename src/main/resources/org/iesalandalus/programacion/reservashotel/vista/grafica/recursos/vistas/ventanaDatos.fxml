@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+
+<Pane prefHeight="700" prefWidth="800" style="-fx-background-color: #92D4F7;" styleClass="raiz" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservashotel.vista.grafica.controladores.CVentanaDatos">
+    <children>
+ 
+ 	  <!-- TEXTO -->
+      <Text fill="#000000" layoutX="400" layoutY="50" text="Datos">
+          <font><Font name="Arial" size="30" /></font>
+      </Text>
+        
+      <!-- Tabla listado de huéspedes --> 
+      <TableView fx:id="TablaListadoHuespedes" layoutX="50" layoutY="70" prefHeight="200" prefWidth="800">
+      
+        <columns>
+          <TableColumn fx:id="Nombre" prefWidth="180" text="Nombre" />
+          <TableColumn fx:id="Dni"    prefWidth="130" text="Dni" />
+          <TableColumn fx:id="Correo" prefWidth="200" text="Correo" />
+          <TableColumn fx:id="Telefono" prefWidth="120" text="Telefono" />
+          <TableColumn fx:id="FechaNacimiento" prefWidth="170" text="Fecha nacimiento" />
+        </columns>
+        
+      </TableView>
+      
+
+	  <!-- Tabla listado de habitaciones -->
+	  <TableView fx:id="TablaListadoHabitaciones" layoutX="50" layoutY="300" prefHeight="200" prefWidth="800">            
+	 
+	 	<columns>
+          <TableColumn fx:id="Identificador" prefWidth="120" text="Identificador" />
+          <TableColumn fx:id="Planta" minWidth="50" text="Planta" />
+          <TableColumn fx:id="Puerta" prefWidth="100" text="Puerta" />
+          <TableColumn fx:id="Precio" prefWidth="100" text="Precio" />
+          <TableColumn fx:id="TipoHabitacion" prefWidth="130" text="Tipo Habitacion" />
+          <TableColumn fx:id="Camas" prefWidth="100" text="Camas" />
+          <TableColumn fx:id="Bano" prefWidth="100" text="Baño" />
+          <TableColumn fx:id="Jacuzzi" prefWidth="100" text="Jacuzzi" />
+         </columns>
+            
+       </TableView>
+
+
+	   <!-- Tabla listado de reservas -->
+       <TableView fx:id="TablaListadoReservas" layoutX="50" layoutY="550" prefHeight="200" prefWidth="800">
+            <columns>
+             <TableColumn fx:id="Nombre1" prefWidth="55" text="Nombre" />
+             <TableColumn fx:id="Dni1" prefWidth="70" text="Dni" />
+             <TableColumn fx:id="Identificador1" prefWidth="40" text="Identificador" />
+             <TableColumn fx:id="TipoHabitacion1" prefWidth="72" text="Tipo Habitacion" />
+             <TableColumn fx:id="FechaInicio1" prefWidth="90" text="Fecha inicio" />
+             <TableColumn fx:id="FechaFin1" prefWidth="70" text="Fecha fin" />
+             <TableColumn fx:id="Precio1" prefWidth="75" text="Precio" />
+             <TableColumn fx:id="Regimen1" prefWidth="80" text="Regimen" />
+             <TableColumn fx:id="CheckIn1" prefWidth="80" text="Check-In" />
+        	 <TableColumn fx:id="CheckOut1" prefWidth="80" text="Check-Out" />
+ 			 <TableColumn fx:id="Personas1" prefWidth="80" text="Personas" />
+            </columns>
+            
+        </TableView>
+
+	<!-- Logo -->
+    <ImageView fitHeight="30" fitWidth="30" layoutX="850" layoutY="750">
+         <image>
+            <Image url="@../imagenes/logo.png" />
+         </image>
+    </ImageView>
+      
+      
+      
+    </children>
+</Pane>

@@ -1,0 +1,40 @@
+/* Estilo para el encabezado de las columnas */
+.table-view .column-header {
+    -fx-background-color: #C8E6C9;
+}
+
+/* Estilo para las filas alternas del contenido */
+.table-row-cell:even {
+    -fx-background-color: #E0F7FA;
+}
+
+/* Estilo para las filas impares del contenido */
+.table-row-cell:odd {
+    -fx-background-color: #B2EBF2;
+}
+
+.table-view .table-row-cell:selected .text {
+    -fx-fill: black;
+}
+
+/* Estilo para el fondo del diálogo */
+.dialog-pane {
+    -fx-background-color: #FFFFE0;
+}
+
+/* Estilo para la barra de arriba del diálogo */
+.dialog-pane .dialog-pane-header {
+    -fx-background-color: #FFD700;
+}
+
+/* Estilo para el texto del diálogo */
+.dialog-pane .alert-content {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+/* Estilo para los botones del diálogo */
+.dialog-pane .button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #FFFFFF;
+}

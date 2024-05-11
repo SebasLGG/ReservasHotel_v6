@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<Pane prefHeight="700" prefWidth="800" style="-fx-background-color: #92D4F7;" styleClass="raiz" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservashotel.vista.grafica.controladores.CVentanaReservas">
+    <children>
+    
+      <!-- Imagen reservas -->
+      <ImageView fitHeight="30" fitWidth="30" layoutX="50" layoutY="50">
+         <image>
+            <Image url="@../imagenes/Reserva.png" />
+         </image>
+      </ImageView>
+      
+      <!-- TEXTO -->
+      <Text fill="#000000" layoutX="180" layoutY="50" text="GESTIÓN RESERVAS">
+          <font><Font name="Arial" size="30" /></font>
+      </Text>
+    
+   	  <!-- Tabla para listado de reservas -->
+      <TableView fx:id="TablaListadoReservas" layoutX="50" layoutY="100" prefHeight="300" prefWidth="600">
+            <columns>
+             <TableColumn fx:id="Nombre" prefWidth="55" text="Nombre" />
+             <TableColumn fx:id="Dni" prefWidth="70" text="Dni" />
+             <TableColumn fx:id="Identificador" prefWidth="40" text="Identificador" />
+             <TableColumn fx:id="TipoHabitacion" prefWidth="72" text="Tipo Habitacion" />
+             <TableColumn fx:id="FechaInicio" prefWidth="90" text="Fecha inicio" />
+             <TableColumn fx:id="FechaFin" prefWidth="70" text="Fecha fin" />
+             <TableColumn fx:id="Precio" prefWidth="75" text="Precio" />
+             <TableColumn fx:id="Regimen" prefWidth="80" text="Regimen" />
+             <TableColumn fx:id="CheckIn" prefWidth="80" text="Check-In" />
+        	 <TableColumn fx:id="CheckOut" prefWidth="80" text="Check-Out" />
+        	 <TableColumn fx:id="Personas" prefWidth="80" text="Personas" />
+        	 
+            </columns>
+
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="InsertarReserva" mnemonicParsing="false" onAction="#insertarReserva" text="Insertar Reserva" />
+                  <MenuItem fx:id="EliminarReserva" mnemonicParsing="false" onAction="#eliminarReserva" text="Eliminar Reserva" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+        </TableView>
+    
+    
+    
+      <!-- Botones para insertar, eliminar, realizar checkin y checkout -->
+      <Button fx:id="InsertarReservas" layoutX="100" layoutY="410" onAction="#insertarReservas" style="-fx-background-color: #4CAF50; -fx-border-color: #388E3C; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Insertar Reserva"/>
+    
+      <Button fx:id="EliminarReservas" layoutX="100" layoutY="450" onAction="#eliminarReservas" style="-fx-background-color: #FF0000; -fx-border-color: #388E3C; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Eliminar Reserva"/>
+    
+      <Button fx:id="RealizarCheckIn" layoutX="400" layoutY="410" onAction="#RealizarcheckInReservas" style="-fx-background-color: #4CAF50; -fx-border-color: #388E3C; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Realizar Check-In"/>
+        
+      <Button fx:id="RealizarCheckOut" layoutX="400" layoutY="450" onAction="#RealizarcheckOutReservas" style="-fx-background-color: #4CAF50; -fx-border-color: #388E3C; -fx-border-width: 3; -fx-text-fill: white; -fx-font-family: Arial; -fx-font-size: 15;" text="Realizar Check-Out"/>
+
+      <!-- Logo -->
+      <ImageView fitHeight="30" fitWidth="30" layoutX="650" layoutY="450">
+         <image>
+            <Image url="@../imagenes/logo.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>
