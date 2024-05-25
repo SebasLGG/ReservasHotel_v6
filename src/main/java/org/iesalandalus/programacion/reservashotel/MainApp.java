@@ -44,6 +44,9 @@ public class MainApp {
             case "-fdmongodb":
                 System.out.println("Conectando a fuente de datos MongoDB.");
                 return FactoriaFuenteDatos.MONGODB;
+            case "-fdfichero":
+                System.out.println("Creando modelo con fuente de datos FICHERO.");
+                return FactoriaFuenteDatos.FICHERO;
             default:
                 System.out.println("Argumento de fuente de datos no válido. Usando MEMORIA por defecto.");
                 return FactoriaFuenteDatos.MEMORIA;
