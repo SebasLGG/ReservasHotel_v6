@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Habitaciones>
-   
+    <Habitacion Identificador="11" Tipo="Suite">
+        <Planta>1</Planta>
+        <Puerta>1</Puerta>
+        <Precio>123.0</Precio>
+        <Jacuzzi>true</Jacuzzi>
+        <Banos>1</Banos>
+    </Habitacion>
+    <Habitacion Identificador="22" Tipo="Doble">
+        <Planta>2</Planta>
+        <Puerta>2</Puerta>
+        <Precio>123.0</Precio>
+        <CamasIndividuales>2</CamasIndividuales>
+        <CamasDobles>0</CamasDobles>
+    </Habitacion>
 </Habitaciones>

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Huespedes>
-            
+                
     
 
    
+
+    <Huesped Dni="77170939M">
+        <Nombre>Sebas</Nombre>
+        <Correo>sebas@gmail.com</Correo>
+        <Telefono>627173849</Telefono>
+        <FechaNacimiento>26/01/1999</FechaNacimiento>
+    </Huesped>
 </Huespedes>
