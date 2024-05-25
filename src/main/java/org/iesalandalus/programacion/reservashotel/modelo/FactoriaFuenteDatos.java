@@ -3,6 +3,7 @@ package org.iesalandalus.programacion.reservashotel.modelo;
 import org.iesalandalus.programacion.reservashotel.modelo.negocio.IFuenteDatos;
 import org.iesalandalus.programacion.reservashotel.modelo.negocio.memoria.FuenteDatosMemoria;
 import org.iesalandalus.programacion.reservashotel.modelo.negocio.mongodb.FuenteDatosMongoDB;
+import org.iesalandalus.programacion.reservashotel.modelo.negocio.fichero.FuenteDatosFichero;
 
 public enum FactoriaFuenteDatos {
 
@@ -17,6 +18,13 @@ public enum FactoriaFuenteDatos {
     MONGODB{
         public IFuenteDatos crear(){
             return new FuenteDatosMongoDB();
+        }
+    },
+    
+    // Métodos para crear una instancia de FuenteDatosFichero.
+    FICHERO {
+        public IFuenteDatos crear() {
+            return new FuenteDatosFichero();
         }
     };
 
