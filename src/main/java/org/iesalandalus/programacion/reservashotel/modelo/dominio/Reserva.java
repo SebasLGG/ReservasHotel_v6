@@ -183,7 +183,7 @@ public class Reserva {
     }
 
     // Método privado para calcular el precio
-    private void setPrecio() {
+    public void setPrecio() {
         if (fechaInicioReserva == null || fechaFinReserva == null) {
             return;
         }
